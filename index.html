@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knoll Painting Co. | Hoquiam, WA</title>
+  <meta name="description" content="Knoll Painting Co. provides professional residential painting in Hoquiam, Washington and surrounding Grays Harbor communities. More than 20 years of painting experience.">
+  <meta name="theme-color" content="#1f2933">
+  <style>
+    :root {
+      --ink:#1f2933; --ink2:#334155; --cream:#f7f4ee; --white:#fff;
+      --gold:#c58b3a; --gold2:#a96f25; --line:#e5e0d7; --muted:#667085;
+      --shadow:0 18px 50px rgba(31,41,51,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit}
+    .topbar{background:var(--ink);color:#fff;font-size:.92rem}
+    .topbar .inner{max-width:1120px;margin:auto;padding:9px 22px;display:flex;justify-content:flex-end;gap:22px}
+    .topbar a{text-decoration:none;opacity:.95}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{font-weight:900;letter-spacing:-.03em;font-size:1.2rem;text-decoration:none}
+    .brand span{color:var(--gold2)}
+    .navlinks{display:flex;gap:25px;align-items:center}
+    .navlinks a{text-decoration:none;font-weight:700;font-size:.94rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#fff;text-decoration:none;font-weight:800;padding:13px 19px;border-radius:999px;box-shadow:0 8px 22px rgba(197,139,58,.22);border:0;cursor:pointer}
+    .btn:hover{background:var(--gold2)}
+    .btn.dark{background:var(--ink)}
+    .btn.dark:hover{background:#111827}
+    .hero{background:linear-gradient(135deg,#1f2933 0%,#334155 58%,#5b6773 100%);color:#fff;overflow:hidden}
+    .hero .wrap{max-width:1120px;margin:auto;padding:92px 22px 100px;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .eyebrow{color:#e9c88e;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:900}
+    h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:.98;letter-spacing:-.055em;margin:15px 0 24px}
+    .hero p{font-size:1.16rem;color:#e5e7eb;max-width:640px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero .btn.dark{background:#fff;color:var(--ink)}
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:26px;padding:34px;box-shadow:var(--shadow)}
+    .hero-card .number{font-size:4rem;font-weight:950;line-height:1;color:#e9c88e}
+    .hero-card h3{margin:10px 0 8px;font-size:1.35rem}
+    .hero-card p{font-size:1rem;margin:0;color:#d8dee6}
+    section{padding:86px 22px}
+    .wrap{max-width:1120px;margin:auto}
+    .section-head{max-width:700px;margin-bottom:42px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;line-height:1.05;margin:10px 0 15px}
+    .section-head p{color:var(--muted);font-size:1.05rem}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 8px 28px rgba(31,41,51,.05)}
+    .icon{width:48px;height:48px;border-radius:14px;background:#f2e5cf;display:grid;place-items:center;font-size:1.35rem;margin-bottom:20px}
+    .card h3{margin:0 0 9px;font-size:1.2rem}
+    .card p{margin:0;color:var(--muted)}
+    .about{background:#fff}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+    .paint-panel{min-height:420px;border-radius:28px;background:
+      linear-gradient(160deg,rgba(255,255,255,.18),transparent 40%),
+      repeating-linear-gradient(12deg,#31404d 0 28px,#3b4a57 28px 31px,#b67c31 31px 60px,#d5b47a 60px 64px);
+      box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .paint-panel:after{content:"20+ YEARS";position:absolute;inset:auto 22px 22px auto;background:#fff;color:var(--ink);font-weight:950;padding:12px 17px;border-radius:999px;letter-spacing:.08em}
+    .about h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.05;letter-spacing:-.04em;margin:10px 0 20px}
+    .about p{color:var(--muted);font-size:1.05rem}
+    .checks{display:grid;gap:11px;margin:25px 0}
+    .check{font-weight:750;display:flex;gap:10px;align-items:flex-start}
+    .check b{color:var(--gold2)}
+    .contact{background:#eef0f1}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+    .contact-list{display:grid;gap:18px;margin-top:22px}
+    .contact-item{display:flex;gap:14px}
+    .contact-item strong{display:block}
+    .contact-item span{color:var(--muted)}
+    form{display:grid;gap:13px}
+    label{font-weight:800;font-size:.9rem}
+    input,textarea{width:100%;border:1px solid #d7dbe0;border-radius:12px;padding:13px 14px;font:inherit;background:#fff}
+    textarea{min-height:130px;resize:vertical}
+    footer{background:var(--ink);color:#d9dee4;padding:34px 22px}
+    footer .inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer strong{color:#fff}
+    .mobile-cta{display:none}
+    @media(max-width:820px){
+      .navlinks{display:none}
+      .hero .wrap,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero .wrap{padding:70px 22px}
+      .services{grid-template-columns:1fr}
+      .paint-panel{min-height:280px}
+    }
+    @media(max-width:560px){
+      .topbar .inner{justify-content:center;gap:12px;font-size:.8rem}
+      h1{font-size:3rem}
+      section{padding:65px 18px}
+      nav{padding:14px 18px}
+      .brand{font-size:1rem}
+      .mobile-cta{display:flex;position:fixed;bottom:14px;left:14px;right:14px;z-index:20}
+      .mobile-cta a{width:100%}
+      footer{padding-bottom:85px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a href="tel:+15642240789">📞 564-224-0789</a>
+      <a href="mailto:knollpainting98550@gmail.com">✉️ knollpainting98550@gmail.com</a>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <a class="brand" href="#top">KNOLL <span>PAINTING CO.</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="tel:+15642240789">Call Jason</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">Hoquiam • Grays Harbor • Washington</div>
+          <h1>Good paint makes a house feel like home.</h1>
+          <p>Professional painting from Jason Knoll, backed by more than 20 years of hands-on experience.</p>
+          <div class="hero-actions">
+            <a class="btn" href="tel:+15642240789">Call for an Estimate</a>
+            <a class="btn dark" href="#contact">Send a Message</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="number">20+</div>
+          <h3>Years of experience</h3>
+          <p>Practical, experienced painting work for homeowners who want the job done carefully and professionally.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Painting work that makes a visible difference.</h2>
+          <p>Whether you're refreshing a room or giving the outside of your home a new look, Knoll Painting Co. brings two decades of experience to the project.</p>
+        </div>
+        <div class="services">
+          <article class="card">
+            <div class="icon">🏠</div>
+            <h3>Interior Painting</h3>
+            <p>Refresh living spaces, bedrooms, kitchens, hallways and other interior areas with a clean, updated finish.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎨</div>
+            <h3>Exterior Painting</h3>
+            <p>Give your home's exterior a renewed appearance with careful preparation and professional painting.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🖌️</div>
+            <h3>Detail &amp; Trim Work</h3>
+            <p>Bring the finished look together with attention to trim, doors, edges and other detail areas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div class="paint-panel" aria-label="Decorative paint texture"></div>
+        <div>
+          <div class="eyebrow">About Jason</div>
+          <h2>Experience you can see in the finished work.</h2>
+          <p>Jason Knoll has more than 20 years of painting experience. Knoll Painting Co. is built around straightforward service, quality workmanship and treating each project with care.</p>
+          <div class="checks">
+            <div class="check"><b>✓</b><span>More than 20 years of painting experience</span></div>
+            <div class="check"><b>✓</b><span>Serving Hoquiam and the surrounding area</span></div>
+            <div class="check"><b>✓</b><span>Residential painting services</span></div>
+            <div class="check"><b>✓</b><span>Direct contact with Jason</span></div>
+          </div>
+          <a class="btn dark" href="tel:+15642240789">Talk to Jason</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Let's talk about your project</div>
+          <h2>Ready for a fresh coat?</h2>
+          <p>Call Jason or send a quick message with a few details about the work you'd like done.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Knoll Painting Co.</h3>
+            <div class="contact-list">
+              <div class="contact-item"><div>📞</div><div><strong>Phone</strong><span><a href="tel:+15642240789">564-224-0789</a></span></div></div>
+              <div class="contact-item"><div>✉️</div><div><strong>Email</strong><span><a href="mailto:knollpainting98550@gmail.com">knollpainting98550@gmail.com</a></span></div></div>
+              <div class="contact-item"><div>📍</div><div><strong>Address</strong><span>927 Lincoln St<br>Hoquiam, WA 98550</span></div></div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <form action="mailto:knollpainting98550@gmail.com" method="post" enctype="text/plain">
+              <div><label for="name">Name</label><input id="name" name="Name" required></div>
+              <div><label for="phone">Phone</label><input id="phone" name="Phone" type="tel"></div>
+              <div><label for="details">Tell us about your project</label><textarea id="details" name="Project Details" required></textarea></div>
+              <button class="btn" type="submit">Email Project Details</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cta"><a class="btn" href="tel:+15642240789">📞 Call Jason — 564-224-0789</a></div>
+
+  <footer>
+    <div class="inner">
+      <div><strong>Knoll Painting Co.</strong><br>Hoquiam, Washington</div>
+      <div>© <span id="year"></span> Knoll Painting Co. • More than 20 years of experience.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
